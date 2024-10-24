@@ -1,0 +1,17 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "blue-river-03bf"
+main = "src/worker.ts"
+compatibility_date = "2024-10-18"
+compatibility_flags = ["nodejs_compat"]
+
+# Workers Logs
+# Docs: https://developers.cloudflare.com/workers/observability/logs/workers-logs/
+# Configuration: https://developers.cloudflare.com/workers/observability/logs/workers-logs/#enable-workers-logs
+
+[observability]
+enabled = true
+
+[[d1_databases]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "votes"
+database_id = "e48432fc-ccea-480f-b433-3834a5070d97"
